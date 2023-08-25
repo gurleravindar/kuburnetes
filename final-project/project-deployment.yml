@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: project-deployment
+ lables:
+  app: project-deployment
+  end: prod
+spec:
+ replicas: 3
+ selector:
+  matchLabels:
+   app: project-deployment
+ template:
+  metadata:
+   name: project-deployment
+   labels:
+    app: project-deployment
+    env: prod
+  spec:
+   containers:
+    - name: c1
+      image: gurleravindar/node-app-12
+    
