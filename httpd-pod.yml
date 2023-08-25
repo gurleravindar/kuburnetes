@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: httpd-pod
+ labels:
+  app: httpd-pod
+  env: dev
+spec:
+ containers:
+  - name: c1
+    image: gurleravindar/httpd-pod 

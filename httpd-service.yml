@@ -1,0 +1,11 @@
+apiVersion:
+kind: Service
+metadata:
+ name: httpd-pod-service
+spec:
+ type: ClusterIP
+ selectors:
+  app: httpd-pod
+ ports:
+  - targetPort: 80 
+    port: 80 
