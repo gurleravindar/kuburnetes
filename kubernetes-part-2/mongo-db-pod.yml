@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: mongo-db-pod
+ labels:
+  app: mongo-db-pod
+  env: dev
+
+spec:
+ containers:
+  - name: c1
+    image: mongo
